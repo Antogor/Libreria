@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 21:56:17 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/10 20:37:01 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/10 21:30:59 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,21 @@
 
 size_t		ft_strlcpy(char *dest, const char *src, size_t dstsize)
 {
-	unsigned int l;
-	unsigned int x;
-	unsigned int q;
-	unsigned int d;
+	size_t l;
+	size_t x;
+	size_t q;
 
+	q = dstsize;
+	x = ft_strlen (src);
 	l = 0;
-	x = 0;
-	d = 0;
-	q = dstsize - 1;
-	x = ft_strlen (dest);
-	d = ft_strlen (src);
-	if (q < d)
+	while (src[l] != '\0' && l < q)
+	{
+		dest[l] = src[l];
+		l++;
+	}
+	dest[l] = '\0';
+	return (x);
+	/*if (q < d)
 	{
 		while (l < q)
 		{
@@ -42,5 +45,5 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t dstsize)
 		dest[l] = '\0';
 	if (q > x)
 		return (0);
-	return (x);
+	return (d);*/
 }

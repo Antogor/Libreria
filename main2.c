@@ -5,8 +5,9 @@
 
 int	main()
 {
-	char a[] = "hola";
-	char b[] = "adios";
+	char a[] = "hola que pasa";
+	char b[] = "adios que pasa que te pica";
+	int x;
 	//printf("%s \n", a);
 	//printf("%s \n", ft_memset(a + 1, 66, 1));
 	//printf("%d %s\n", ft_strlcpy(a, b, 6), a);
@@ -22,9 +23,10 @@ int	main()
 	//memmove(a, b, 10);
 	//printf("%lu\n", strlcat(a, b, 2));
 	//printf("%d\n", ft_strncmp(a, b, 10));
-	printf("%d\n", ft_memcmp(a, b, 4));
+	x = ft_strlen(a);
+	printf("%ld\n", ft_strlcpy(a, b, x));
 	//printf("%d\n", strlcpy(a, b, 1));
-	//printf("%s\n", a);
+	printf("%s\n", a);
 	//printf("%s", a);
 	return(0);
 }
