@@ -5,7 +5,7 @@
 
 int	main()
 {
-	char a[] = "Hola que pasa";
+	char a[] = "-21474836495";
 	char b[] = "Z";
 	int x = 0;
 	//printf("%s \n", a);
@@ -24,8 +24,8 @@ int	main()
 	//printf("%lu\n", strlcat(a, b, 2));
 	//printf("%d\n", ft_strncmp(a, b, 10));
 	//x = ft_strlen(a);
-	//printf ("%d\n", atoi(a));
-	printf("%s\n", ft_strnstr(a, b, 5));
+	printf ("%d\n", ft_atoi(a));
+	//printf("%s\n", ft_strnstr(a, b, 5));
 	//printf("%d\n", strlcpy(a, b, 1));
 	//printf("%s\n", a);
 	//printf("%s", a);
