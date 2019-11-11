@@ -7,7 +7,7 @@ int	main()
 {
 	char a[] = "-21474836495";
 	char b[] = "Z";
-	int x = 0;
+	int *x;
 	//printf("%s \n", a);
 	//printf("%s \n", ft_memset(a + 1, 66, 1));
 	//printf("%d %s\n", ft_strlcpy(a, b, 6), a);
@@ -24,7 +24,12 @@ int	main()
 	//printf("%lu\n", strlcat(a, b, 2));
 	//printf("%d\n", ft_strncmp(a, b, 10));
 	//x = ft_strlen(a);
-	printf ("%d\n", ft_atoi(a));
+	printf("%p\n", x = (int*)calloc(0, 0));
+	if (x == NULL)
+		printf("Error\n");
+	else 
+		printf("Todo bien\n");
+	//printf ("%p\n", x);
 	//printf("%s\n", ft_strnstr(a, b, 5));
 	//printf("%d\n", strlcpy(a, b, 1));
 	//printf("%s\n", a);
