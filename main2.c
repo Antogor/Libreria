@@ -7,7 +7,7 @@ int	main()
 {
 	char a[] = "Hola";
 	char b[] = "aios";
-	int x;
+	int x = '2';
 	//printf("%s \n", a);
 	//printf("%s \n", ft_memset(a + 1, 66, 1));
 	//printf("%d %s\n", ft_strlcpy(a, b, 6), a);
