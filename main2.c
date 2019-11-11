@@ -6,7 +6,7 @@
 int	main()
 {
 	char a[] = "Hola";
-	char b[] = "adios";
+	char b[] = "adi";
 	int x;
 	//printf("%s \n", a);
 	//printf("%s \n", ft_memset(a + 1, 66, 1));
