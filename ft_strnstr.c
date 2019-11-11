@@ -17,13 +17,13 @@ char	*ft_strnstr(const char *src, const char *to_find, size_t len)
 	size_t	l;
 
 	l = 0;
-	if (src[l] == '\0')
-		return ((char*)src);
+	if (to_find[l] == '\0')
+		return((char*)src);
 	while (src[l] != '\0' && l < len)
 	{
-		if (src[l] == to_find[l])
-			return ((char*)to_find);
+		if (src[l] == to_find[0])
+			return ((char*)&src[l]);
 		l++;
 	}
-	return (NULL);
+	return ((char*)src);
 }
