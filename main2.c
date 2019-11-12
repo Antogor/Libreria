@@ -24,11 +24,10 @@ int	main()
 	//printf("%lu\n", strlcat(a, b, 2));
 	//printf("%d\n", ft_strncmp(a, b, 10));
 	//x = ft_strlen(a);
-	printf("%p\n", x = (int*)calloc(0, 0));
-	if (x == NULL)
-		printf("Error\n");
-	else 
-		printf("Todo bien\n");
+	printf("%p\n", x);
+	printf("%p\n", x = (int*)ft_calloc(0, 0));
+	x[2] = 4;
+	printf("%p\n %d", x, x[0]);
 	//printf ("%p\n", x);
 	//printf("%s\n", ft_strnstr(a, b, 5));
 	//printf("%d\n", strlcpy(a, b, 1));
