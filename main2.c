@@ -28,6 +28,6 @@ int	main()
 	//printf("%s\n", ft_strnstr(a, b, 5));
 	//printf("%d\n", strlcpy(a, b, 1));
 	b = ft_strdup(a);
-	printf("%s", b);
+	printf("%s\n", b);
 	return(0);
 }
