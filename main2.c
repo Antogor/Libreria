@@ -5,19 +5,19 @@
 
 int	main()
 {
-	char a[] = "";
-	char b[] = "dfsfsfd";
+	void *a = "hola";
+	void *b = "adios";
 	//int *x;
 	//printf("%s \n", ft_memset(a, 66, 1));
-	//printf("%d %s\n", ft_strlcpy(a, b, 6), a);
+	printf("%zu %s\n", ft_strlcpy(a, b, 6), a);
 	//printf("%lu %s", strlcpy(a, b, 6), a);
 	//printf("%s \n", bzero(a, 2));
 	//ft_bzero(a, 2);
 	//printf("%c", toupper(b));
-	//memccpy(a, b, 'h', 5);
-	//ft_memccpy(a, b, 'h', 5);
-	//memmove(a, b, 1);
-	ft_memmove(a, b, 1);
+	//memccpy(a, b, 'a', 2);
+	//ft_memccpy(a, b, 'a', 2);
+	//memmove((void*)0, (void*)0, 5);
+	//ft_memmove((void*)0, (void*)0, 5);
 	//printf("%lu\n", strlcat(a, b, 2));
 	//printf("%d\n", strncmp(a, b, 0));
 	//printf("%d\n", ft_strncmp(a, b, 0));
