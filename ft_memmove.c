@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 15:40:30 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/13 14:09:23 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/13 16:16:57 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	l = (unsigned char*)dst;
 	q = (unsigned char*)src;
+	if ((void*)l == NULL && (void*)q == NULL)
+		return (NULL);
 	if (l < q)
 	{
 		while (len--)
