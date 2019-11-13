@@ -5,12 +5,12 @@
 
 int	main()
 {
-	void *a = "hola";
-	void *b = "adios";
+	char a[] = "hola";
+	char b[] = "adios";
 	//int *x;
 	//printf("%s \n", ft_memset(a, 66, 1));
-	printf("%zu %s\n", ft_strlcpy(a, b, 6), a);
-	//printf("%lu %s", strlcpy(a, b, 6), a);
+	//printf("%lu %s\n", ft_strlcpy(a, b, 6), a);
+	printf("%lu\n", strlcpy(a, b, 6));
 	//printf("%s \n", bzero(a, 2));
 	//ft_bzero(a, 2);
 	//printf("%c", toupper(b));
