@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 13:10:15 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/09 19:23:42 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/13 11:56:08 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ void	*ft_memccpy(void *restrict dst,
 const void *restrict src, int c, size_t n)
 {
 	unsigned char	*l;
-	const char		*q;
+	unsigned char	*q;
 
 	l = (unsigned char*)dst;
-	q = (const char*)src;
+	q = (unsigned char*)src;
 	while (n--)
 	{
 		*l = *q;
-		if (*q == c)
+		if (*q == (unsigned char)c)
 			return (dst);
 		l++;
 		q++;
