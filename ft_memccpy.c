@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 13:10:15 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/13 11:56:08 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/13 15:26:43 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,17 @@ const void *restrict src, int c, size_t n)
 {
 	unsigned char	*l;
 	unsigned char	*q;
+	size_t			x;
 
 	l = (unsigned char*)dst;
 	q = (unsigned char*)src;
-	while (n--)
+	x = 0;
+	while (x < n)
 	{
-		*l = *q;
-		if (*q == (unsigned char)c)
-			return (dst);
-		l++;
-		q++;
+		l[x] = q[x];
+		if (q[x] == (unsigned char)c)
+			return ((void*)l + x + 1);
+		x++;
 	}
-	return (0);
+	return (NULL);
 }
