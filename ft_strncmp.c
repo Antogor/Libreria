@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 14:06:56 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/13 12:42:46 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/13 12:43:59 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t l;
-	
+
 	if (n == 0)
 		return (0);
 	l = 0;
