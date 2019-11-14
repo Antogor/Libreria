@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 21:56:17 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/14 11:04:11 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/14 16:31:47 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ size_t	ft_strlcpy(char *restrict dst,
 	q = dstsize + 1;
 	x = ft_strlen(src);
 	l = 0;
-	if (q > x)
-		return (x);
-	else if (q <= x)
+	if (q <= x)
 	{
 		while (src[l] != '\0' && l < q)
 		{

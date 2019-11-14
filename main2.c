@@ -5,11 +5,11 @@
 
 int	main()
 {
-	char a[] = "";
-	char b[] = "";
+	char a[] = "21\n\t\f\r45";
+	char *b;
 	//int *x;
 	//printf("%s \n", ft_memset(a, 66, 1));
-	printf("%lu %s\n", ft_strlcpy(a, b, 2), a);
+	//printf("%lu %s\n", ft_strlcpy(a, b, 2), a);
 	//printf("%u\n", strlcpy(a, b, 3));
 	//printf("%s \n", bzero(a, 2));
 	//ft_bzero(a, 2);
@@ -18,7 +18,7 @@ int	main()
 	//ft_memccpy(a, b, 'a', 2);
 	//memmove((void*)0, (void*)0, 5);
 	//ft_memmove((void*)0, (void*)0, 5);
-	//printf("%lu\n", strlcat(a, b, 2));
+	//printf("%lu\n", ft_strlcat(a, b, 10));
 	//printf("%d\n", strncmp(a, b, 0));
 	//printf("%d\n", ft_strncmp(a, b, 0));
 	//x = ft_strlen(a);
@@ -28,9 +28,9 @@ int	main()
 	//printf("%p\n%d\n", x, x[2]);
 	//printf ("%p\n", x);
 	//printf("%s\n", ft_strnstr(a, b, 5));
-	//printf("%lu\n", strlcpy(a, b, 0));
-	//printf("%lu\n", strlcpy(a, b, 0));
-	//b = substr(a, 4, 3);
-	printf("%s\n", a);
+	//b = ft_substr(a, 4, 1);
+	printf("%d\n", ft_atoi(a));
+	printf("%d\n", atoi(a));
+	//printf("%s\n", b);
 	return(0);
 }
