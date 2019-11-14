@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 21:56:17 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/13 17:16:19 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/14 11:04:11 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,13 @@ size_t	ft_strlcpy(char *restrict dst,
 	size_t l;
 	size_t x;
 	size_t q;
-	size_t z;
 
-	q = dstsize;
+	q = dstsize + 1;
 	x = ft_strlen(src);
-	z = ft_strlen(dst);
 	l = 0;
-	if (q > x || q > z)
+	if (q > x)
 		return (x);
-	else if (q <= x && q <= z)
+	else if (q <= x)
 	{
 		while (src[l] != '\0' && l < q)
 		{
@@ -34,7 +32,7 @@ size_t	ft_strlcpy(char *restrict dst,
 			l++;
 		}
 	
-		dst[l] = '\0';
+		dst[l - 1] = '\0';
 	}
 	return (x);
 }
