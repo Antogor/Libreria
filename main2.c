@@ -5,8 +5,8 @@
 
 int	main()
 {
-	char a[] = "Hola";
-	char b[] = "";
+	char a[] = "lorem ipsum dolor sit amet";
+	char b[] = "lor sit amet";
 	//int *x;
 	//printf("%s \n", ft_memset(a, 66, 1));
 	//printf("%lu %s\n", ft_strlcpy(a, b, 2), a);
@@ -29,10 +29,11 @@ int	main()
 	//x[2] = 4;
 	//printf("%p\n%d\n", x, x[2]);
 	//printf ("%p\n", x);
-	//printf("%s\n", ft_strnstr(a, b, 5));
+	//printf("%s\n", ft_strnstr(a, b, 10));
 	//b = ft_substr(a, 4, 1);
 	//printf("%d\n", ft_atoi(a));
 	//printf("%d\n", atoi(a));
+	printf("%s\n", ft_strdup(a));
 	//printf("%s\n", b);
 	return(0);
 }
