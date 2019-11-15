@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 16:50:03 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/15 11:14:00 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/15 12:15:48 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	size_t	x;
 
 	x = ft_strlen(s1);
-	dup = malloc(x + 1);
+	dup = malloc(sizeof(char) * (x + 1));
 	if (dup == 0)
 		return (NULL);
 	ft_strlcpy((void*)dup, (void*)s1, x);
