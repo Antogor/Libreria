@@ -29,14 +29,14 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJS) libft.h
-	gcc -c $(CFLAGS) $(FUN)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	@gcc -c $(CFLAGS) $(FUN)
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	@rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all

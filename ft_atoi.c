@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 12:27:19 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/15 10:44:19 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/15 11:26:16 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_atoi(const char *nptr)
 	negative = 1;
 	while (nptr[l] != '\0')
 	{
-		if (nptr[l] == '\t' || nptr[l] == '\n'
+		if (nptr[l] == '\t' || nptr[l] == '\n' || nptr[l] == ' '
 		|| nptr[l] == '\v' || nptr[l] == '\f' || nptr[l] == '\r')
 			l++;
 		else

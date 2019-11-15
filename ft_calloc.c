@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 12:29:59 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/13 11:09:16 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/15 11:08:50 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*cont;
-
-	if (count == 0 || size == 0)
-		return (NULL);
+	
 	cont = malloc(count * size);
+	if (cont == 0)
+		return (NULL);
 	ft_bzero(cont, (count * size));
 	return (cont);
 }

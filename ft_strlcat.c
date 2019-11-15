@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 12:31:21 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/15 10:40:38 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/15 11:21:46 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 	if (dstsize == 0)
 		return (ori);
 	if (dstsize < dest)
-		ori = dest + dstsize;
+		ori += dstsize;
 	else
 		ori += dest;
 	l = 0;
