@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 15:40:30 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/13 16:16:57 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/15 10:40:08 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		while(len--)
+		while (len--)
 			l[len] = q[len];
 	}
 	return (dst);

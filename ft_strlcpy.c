@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 21:56:17 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/14 18:52:15 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/15 10:40:23 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 			dst[l] = src[l];
 			l++;
 		}
-	
 		dst[l - 1] = '\0';
 	}
 	return (x);
