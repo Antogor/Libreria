@@ -5,14 +5,14 @@
 
 int	main()
 {
-	char a[] = "lorem ipsum dolor sit amet";
-	char b[] = "lor sit amet";
+	char a[] = "hola";
+	char b[] = "adi";
 	//int *x;
 	//printf("%s \n", ft_memset(a, 66, 1));
 	//printf("%lu %s\n", ft_strlcpy(a, b, 2), a);
 	//printf("%lu %s\n", strlcpy(a, b, 2), a);
-	//printf("%lu %s\n", strlcat(a, b, 2), a);
-	//printf("%lu %s\n", ft_strlcat(a, b, 2), a);
+	//printf("%lu %s\n", strlcat(a, b, 4), a);
+	printf("%lu %s\n", ft_strlcat(a, b, 7), a);
 	//printf("%s \n", bzero(a, 2));
 	//ft_bzero(a, 2);
 	//printf("%c", toupper(b));
@@ -33,7 +33,7 @@ int	main()
 	//b = ft_substr(a, 4, 1);
 	//printf("%d\n", ft_atoi(a));
 	//printf("%d\n", atoi(a));
-	printf("%s\n", ft_strdup(a));
+	//printf("%s\n", ft_strdup(a));
 	//printf("%s\n", b);
 	return(0);
 }
