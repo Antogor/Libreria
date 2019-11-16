@@ -14,8 +14,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	l = 0;
 	while (total--)
 	{
-		new[l] = *s1++;
-		l++;
+		if (*s1 != '\0')
+		{
+			new[l] = *s1++;
+			l++;
+		}
 		if (*s1 == '\0')
 		{
 			while (*s2)

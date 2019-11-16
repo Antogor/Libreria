@@ -5,8 +5,8 @@
 
 int	main()
 {
-	char a[] = "hola";
-	char b[] = " que tal";
+	char a[] = "";
+	char b[] = "dolor sit amet";
 	//int *x;
 	//printf("%s \n", ft_memset(a, 66, 1));
 	//printf("%lu %s\n", ft_strlcpy(a, b, 2), a);
