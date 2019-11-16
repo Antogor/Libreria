@@ -5,8 +5,8 @@
 
 int	main()
 {
-	char a[] = "";
-	char b[] = "dolor sit amet";
+	char a[] = "rrrrrrrrrrrrrrr";
+	char b[] = "";
 	//int *x;
 	//printf("%s \n", ft_memset(a, 66, 1));
 	//printf("%lu %s\n", ft_strlcpy(a, b, 2), a);
@@ -20,7 +20,7 @@ int	main()
 	//ft_memccpy(a, b, 'a', 2);
 	//memmove((void*)0, (void*)0, 5);
 	//ft_memmove((void*)0, (void*)0, 5);
-	//printf("%lu\n", ft_strlcat(a, b, 10));
+	printf("%lu %s\n", ft_strlcat(a, b, 20), a);
 	//printf("%d\n", strncmp(a, b, 0));
 	//printf("%d\n", ft_strncmp(a, b, 0));
 	//x = ft_strlen(a);
@@ -35,7 +35,7 @@ int	main()
 	//printf("%d\n", atoi(a));
 	//printf("%s\n", ft_strdup(a));
 	//printf("%s\n", b);
-	char *c = ft_strjoin(a, b);
-	printf("%s\n", c);
+	//char *c = ft_strjoin(a, b);
+	//printf("%s\n", c);
 	return(0);
 }
