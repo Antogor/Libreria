@@ -1,24 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/12 12:29:59 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/18 10:32:37 by agarzon-         ###   ########.fr       */
+/*   Created: 2019/11/18 12:38:38 by agarzon-          #+#    #+#             */
+/*   Updated: 2019/11/18 13:39:34 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	void	*cont;
+	char	*new;
+	int		l;
+	int		x;
+	int		c;
+	size_t	q;
 
-	cont = malloc(count * size);
-	if (cont == 0)
+	l = 0;
+	x = 0;
+	c = 0;
+	q = ft_strlen(s1);
+	new = malloc(sizeof(char) * q + 1);
+	if (new == 0)
 		return (NULL);
-	ft_bzero(cont, (count * size));
-	return (cont);
+	while (*set)
+	{
+		x = 0;
+		c = 0;
+		while (s1[x])
+		{
+			if (s1[x] == *set)
+				x++;
+			else
+				new[l + c++] = s1[x++];
+		}
+		set++;
+		l++;
+	}
+	new[l] = '\0';
+	return (new);
 }
