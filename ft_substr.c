@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 10:50:51 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/18 10:52:56 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/18 17:38:45 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (substr == 0)
 		return (NULL);
 	q = 0;
-	while (s[start] != '\0' && q < len)
+	if (start > ft_strlen(s))
+	{
+		substr[q] = '\0';
+		return (substr);
+	}
+	while (q < len)
 		substr[q++] = s[start++];
 	substr[q] = '\0';
 	return (substr);

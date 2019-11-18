@@ -5,14 +5,14 @@
 
 int	main()
 {
-	char a[] = "Halala";
-	char b[] = "al";
+	char a[] = "rrrrrrrrrrrrrrr";
+	char b[] = "lore ipsum dolor sit amet";
 	//int *x;
 	//printf("%s \n", ft_memset(a, 66, 1));
 	//printf("%lu %s\n", ft_strlcpy(a, b, 2), a);
 	//printf("%lu %s\n", strlcpy(a, b, 2), a);
 	//printf("%lu %s\n", strlcat(a, b, 10), a);
-	//printf("%lu %s\n", ft_strlcat(a, b, 10), a);
+	printf("%lu %s\n", ft_strlcat(a, b, 5), a);
 	//printf("%s \n", bzero(a, 2));
 	//ft_bzero(a, 2);
 	//printf("%c", toupper(b));
@@ -36,8 +36,8 @@ int	main()
 	//printf("%s\n", ft_strdup(a));
 	//printf("%s\n", b);
 	//char *c = ft_strjoin(a, b);
-	//char *c = ft_substr(a, 0, 20);
-	char *c = ft_strtrim(a, b);
-	printf("%s\n", c);
+	//char *c = ft_substr(a, 4, 3);
+	//char *c = ft_strtrim(a, "al");
+	//printf("%s\n", c);
 	return(0);
 }
