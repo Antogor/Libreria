@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:12:14 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/19 18:47:00 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/19 20:19:59 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ char	**ft_split(char const *s, char c)
 	size_t	colum;
 	size_t	l;
 	size_t	q;
-	size_t x;
 
 	if (*s == 0 || c == 0)
 		return (NULL);
@@ -56,9 +55,16 @@ char	**ft_split(char const *s, char c)
 	new = ft_bidimension(fil, colum);
 	l = 0;
 	q = 0;
-	while (*s != c)
+	while (*s)
 	{
-		new[l][q] = *s++;
+		if (*s == c)
+		{
+			new[l][q] = '\0';
+			q = 0;
+			l++;
+			s++;
+		}
+		new[l][q++] = *s++;
 	}
 	return (new);
 }

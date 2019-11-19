@@ -41,8 +41,8 @@ int	main()
 	//char *c = ft_substr(a, 4, 3);
 	//char *c = ft_strtrim(a, "l ");
 	//char *c = ft_strtrim(b, " ");
-	char **c = ft_split(a, 'z');
-	
-	printf("%s\n", *c);
+	//char **c = ft_split(a, 'z');
+	char *c = ft_itoa(-2147483648);
+	printf("%s\n", c);
 	return(0);
 }
