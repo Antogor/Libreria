@@ -5,7 +5,9 @@
 
 int	main()
 {
-	char a[] = "          ";
+	char a[] = "H o la";
+	int l;
+	int q;
 	//char b[] = "lorem \n ipsum \t dolor \n sit \t amet";
 	//int *x;
 	//printf("%s \n", ft_memset(a, 66, 1));
@@ -39,7 +41,8 @@ int	main()
 	//char *c = ft_substr(a, 4, 3);
 	//char *c = ft_strtrim(a, "l ");
 	//char *c = ft_strtrim(b, " ");
-	char **c = ft_split(a, ' ');
+	char **c = ft_split(a, 'z');
+	
 	printf("%s\n", *c);
 	return(0);
 }

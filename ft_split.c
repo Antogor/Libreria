@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:12:14 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/19 14:29:51 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/19 18:47:00 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,13 @@ size_t		ft_count(char const *s, char c)
 
 char	**ft_bidimension(size_t fil, size_t colum)
 {
-	char **new;
-	int l;
+	char	**new;
+	size_t	l;
 
-	new = (char**)malloc(colum * fil + 1);
+	new = (char**)malloc(colum + 1 * sizeof(char));
 	l = 0;
 	while (l < colum)
-	{
-		new[l] = (char*)malloc(sizeof (char) * fil);
-		l++;
-	}
+		new[l++] = (char*)malloc(sizeof (char) * fil);
 	if (new == NULL)
 		return (NULL);
 	return(new);
@@ -45,17 +42,23 @@ char	**ft_bidimension(size_t fil, size_t colum)
 
 char	**ft_split(char const *s, char c)
 {
-	char **new;
+	char	**new;
 	size_t	fil;
 	size_t	colum;
+	size_t	l;
+	size_t	q;
+	size_t x;
 
-	if (!s || !c)
+	if (*s == 0 || c == 0)
 		return (NULL);
-	colum = ft_strlen(s);
-	fil = ft_count(s, c);
+	fil = ft_strlen(s);
+	colum = ft_count(s, c);
 	new = ft_bidimension(fil, colum);
-	if (!new)
-		return (NULL);
-	
+	l = 0;
+	q = 0;
+	while (*s != c)
+	{
+		new[l][q] = *s++;
+	}
 	return (new);
 }
