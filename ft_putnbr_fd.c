@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:16:21 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/18 17:26:47 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/20 13:52:37 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,19 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	unsigned int	a;
+	char			nb;
+
+	a = n;
+	if (n < 0)
+	{
+		a = n * -1;
+		write(fd, "-", 1);
+	}
+	if (a >= 10)
+	{
+		ft_putnbr_fd(a / 10, fd);
+	}
+	nb = a % 10 + 48;
+	write(fd, &nb, 1);
 }

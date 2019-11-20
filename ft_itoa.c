@@ -6,37 +6,47 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:12:48 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/19 23:09:38 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/20 14:38:38 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count(int nb)
+int		ft_count_nb(int nb)
 {
-	int count;
+	int				count;
+	unsigned int	c;
 
+	c = 0;
 	count = 0;
 	if (nb < 0)
 	{
-		nb = nb * -1;
+		c = nb * -1;
 		count++;
 	}
-	while (nb >= 10)
+	if (nb > 0)
+		c = nb;
+	while (c >= 10)
 	{
-		nb = nb /10;
+		c = c / 10;
 		count++;
 	}
-	return(count + 1);
+	if (c < 10)
+		count++;
+	return (count);
 }
 
 char	*ft_itoa(int n)
 {
-	char *new;
-	int l;
+	char			*new;
+	int				l;
+	unsigned int	c;
 
-	l = ft_count(n);
+	c = 0;
+	l = ft_count_nb(n);
 	new = (char*)malloc(sizeof(char) * l + 1);
+	if (new == 0)
+		return (NULL);
 	new[l--] = '\0';
 	if (n == 0)
 	{
@@ -46,12 +56,14 @@ char	*ft_itoa(int n)
 	if (n < 0)
 	{
 		new[0] = '-';
-		n = n * -1;
+		c = n * -1;
 	}
-	while (n > 0)
+	if (n > 0)
+		c = n;
+	while (c > 10 || (c < 10 && c != 0))
 	{
-		new[l--] = 48 + (n%10);
-		n = n / 10;
+		new[l--] = 48 + (c % 10);
+		c = c / 10;
 	}
 	return (new);
 }

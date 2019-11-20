@@ -6,13 +6,13 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:12:14 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/19 20:19:59 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/20 10:22:06 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_count(char const *s, char c)
+size_t	ft_count_char(char const *s, char c)
 {
 	int	count;
 
@@ -34,10 +34,10 @@ char	**ft_bidimension(size_t fil, size_t colum)
 	new = (char**)malloc(colum + 1 * sizeof(char));
 	l = 0;
 	while (l < colum)
-		new[l++] = (char*)malloc(sizeof (char) * fil);
+		new[l++] = (char*)malloc(sizeof(char) * fil);
 	if (new == NULL)
 		return (NULL);
-	return(new);
+	return (new);
 }
 
 char	**ft_split(char const *s, char c)
@@ -51,8 +51,9 @@ char	**ft_split(char const *s, char c)
 	if (*s == 0 || c == 0)
 		return (NULL);
 	fil = ft_strlen(s);
-	colum = ft_count(s, c);
-	new = ft_bidimension(fil, colum);
+	colum = ft_count_char(s, c);
+	if (!(new = ft_bidimension(fil, colum)))
+		return (NULL);
 	l = 0;
 	q = 0;
 	while (*s)
