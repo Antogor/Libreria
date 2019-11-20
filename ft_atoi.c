@@ -6,15 +6,15 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 12:27:19 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/15 11:26:16 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/20 18:22:04 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_atoi(const char *nptr)
 {
-	int l;
-	int numb;
-	int negative;
+	int			l;
+	long int	numb;
+	long int	negative;
 
 	l = 0;
 	numb = 0;

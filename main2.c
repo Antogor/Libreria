@@ -33,7 +33,7 @@ int	main()
 	//printf ("%p\n", x);
 	//printf("%s\n", ft_strnstr(a, b, 10));
 	//b = ft_substr(a, 0, 6);
-	//printf("%d\n", ft_atoi(a));
+	printf("%d\n", ft_atoi("99999999999999999999999999"));
 	//printf("%d\n", atoi(a));
 	//printf("%s\n", ft_strdup(a));
 	//printf("%s\n", b);
@@ -42,8 +42,8 @@ int	main()
 	//char *c = ft_strtrim(a, "l ");
 	//char *c = ft_strtrim(b, " ");
 	//char **c = ft_split(a, 'z');
-	char *c = ft_itoa(-623);
-	printf("%s\n", c);
+	//char *c = ft_itoa(0);
+	//printf("%s\n", c);
 	//ft_putnbr_fd(-2147483648, 1);
 	return(0);
 }
