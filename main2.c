@@ -5,7 +5,7 @@
 
 int	main()
 {
-	char a[] = "H o la";
+	char a[] = "hello, i'm a data";
 	int l;
 	int q;
 	//char b[] = "lorem \n ipsum \t dolor \n sit \t amet";
@@ -33,17 +33,18 @@ int	main()
 	//printf ("%p\n", x);
 	//printf("%s\n", ft_strnstr(a, b, 10));
 	//b = ft_substr(a, 0, 6);
-	printf("%d\n", ft_atoi("99999999999999999999999999"));
+	//printf("%d\n", ft_atoi("99999999999999999999999999"));
 	//printf("%d\n", atoi(a));
 	//printf("%s\n", ft_strdup(a));
 	//printf("%s\n", b);
 	//char *c = ft_strjoin(a, b);
 	//char *c = ft_substr(a, 4, 3);
-	//char *c = ft_strtrim(a, "l ");
+	ft_lstnew(a);
+	//char *c = ft_strtrim(a, "a");
 	//char *c = ft_strtrim(b, " ");
 	//char **c = ft_split(a, 'z');
 	//char *c = ft_itoa(0);
-	//printf("%s\n", c);
+	printf("%s\n", t_list.conten);
 	//ft_putnbr_fd(-2147483648, 1);
 	return(0);
 }
