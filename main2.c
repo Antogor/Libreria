@@ -39,12 +39,26 @@ int	main()
 	//printf("%s\n", b);
 	//char *c = ft_strjoin(a, b);
 	//char *c = ft_substr(a, 4, 3);
-	ft_lstnew(a);
+	//ft_lstnew(a);
 	//char *c = ft_strtrim(a, "a");
 	//char *c = ft_strtrim(b, " ");
 	//char **c = ft_split(a, 'z');
 	//char *c = ft_itoa(0);
-	printf("%s\n", t_list.conten);
+	//printf("%s\n", conten);
 	//ft_putnbr_fd(-2147483648, 1);
 	return(0);
 }
+
+/*t_list *l = lstnew(strdup("nyacat"));
+	t_list *n = lstnew(strdup("OK"));
+
+	ft_lstadd_front(&l, n);
+	if (l == n && !strcmp(l->content, "OK"))
+	{
+		free(l->next);
+		free(l);
+		exit(TEST_SUCCESS);
+	}
+	free(l->next);
+	free(l);
+	exit(TEST_FAILED);*/
