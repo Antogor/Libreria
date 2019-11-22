@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/22 13:08:05 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/22 16:24:57 by agarzon-         ###   ########.fr       */
+/*   Created: 2019/11/22 17:32:42 by agarzon-          #+#    #+#             */
+/*   Updated: 2019/11/22 18:06:17 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **alst, t_list *new)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*))
 {
-	t_list *aux;
+	t_list *new;
 	
-	aux = *alst;
-	if (aux = NULL)
-		*alst = new;
-	else
+	while (lst)
 	{
-		while (aux->next)
-			aux = aux->next;
-		aux->next = new;
-		new->next = NULL;
+		new = ft_lstnew(f(lst->content));
+		new = lst->next;
+		ft_lstdelone(lst, del);
+		new = lst->next; 
 	}
+	return (new);
 }
