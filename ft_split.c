@@ -6,13 +6,13 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:12:14 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/20 10:22:06 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/22 10:53:11 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_char(char const *s, char c)
+size_t	ft_count_fil(char const *s, char c)
 {
 	int	count;
 
@@ -23,37 +23,49 @@ size_t	ft_count_char(char const *s, char c)
 			count++;
 		s++;
 	}
-	return (count + 1);
+	return (count);
 }
 
-char	**ft_bidimension(size_t fil, size_t colum)
+size_t	ft_count_colum(char const *s, char c, size_t fil)
 {
-	char	**new;
-	size_t	l;
+	size_t l;
+	size_t countco;
+	
+	while (l <= fil)
+	{
+		
+	}
+}
 
-	new = (char**)malloc(colum + 1 * sizeof(char));
+/*char	**ft_bidimension(char **arraybi, size_t fil, size_t colum)
+{	
+	size_t l;
+
+	arraybi = (char**)malloc(fil * sizeof(char));
 	l = 0;
 	while (l < colum)
-		new[l++] = (char*)malloc(sizeof(char) * fil);
-	if (new == NULL)
+		arraybi[fil][l++] = (char*)malloc(sizeof(char) * colum);
+	if (arraybi == NULL)
 		return (NULL);
-	return (new);
-}
+	return (arraybi);
+}*/
 
 char	**ft_split(char const *s, char c)
 {
 	char	**new;
-	size_t	fil;
-	size_t	colum;
+	
 	size_t	l;
 	size_t	q;
-
+	size_t	fil;
+	size_t	colum;
+	
 	if (*s == 0 || c == 0)
 		return (NULL);
-	fil = ft_strlen(s);
-	colum = ft_count_char(s, c);
-	if (!(new = ft_bidimension(fil, colum)))
-		return (NULL);
+	fil = ft_count_fil(s, c);
+	*new = malloc(sizeof(char) * fil);
+	colum = ft_count_colum(s, c, fil);
+	/*if (!(ft_bidimension(new, fil, colum)))
+		return (NULL);*/
 	l = 0;
 	q = 0;
 	while (*s)

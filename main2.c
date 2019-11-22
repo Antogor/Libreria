@@ -42,7 +42,7 @@ int	main()
 	//ft_lstnew(a);
 	//char *c = ft_strtrim(a, "a");
 	//char *c = ft_strtrim(b, " ");
-	//char **c = ft_split(a, 'z');
+	char **c = ft_split(a, ' ');
 	//char *c = ft_itoa(0);
 	//printf("%s\n", conten);
 	//ft_putnbr_fd(-2147483648, 1);

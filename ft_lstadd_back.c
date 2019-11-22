@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/21 15:50:56 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/22 12:58:56 by agarzon-         ###   ########.fr       */
+/*   Created: 2019/11/22 13:08:05 by agarzon-          #+#    #+#             */
+/*   Updated: 2019/11/22 13:29:47 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
-{
-	if (alst && new)
+void	ft_lstadd_back(t_list **alst, t_list *new)
+{	
+	while ((*alst))
 	{
-		new->next = *alst;
-		*alst = new;
+		*(alst++);
+		if (alst == NULL)
+			new->next = NULL;
 	}
 }
