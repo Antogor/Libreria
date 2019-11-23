@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 17:32:42 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/22 18:06:17 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/23 12:03:54 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*))
 	while (lst)
 	{
 		new = ft_lstnew(f(lst->content));
-		new = lst->next;
+		if (lst->next != NULL)
+			new = lst->next;
+		else
+			new->next = NULL;
 		ft_lstdelone(lst, del);
-		new = lst->next; 
 	}
 	return (new);
 }

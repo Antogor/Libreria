@@ -5,7 +5,8 @@
 
 int	main()
 {
-	char a[] = "hello, i'm a data";
+	char a[] = " lorem ipsum dolor sit";
+	t_list *elemen;
 	int l;
 	int q;
 	//char b[] = "lorem \n ipsum \t dolor \n sit \t amet";
@@ -39,12 +40,12 @@ int	main()
 	//printf("%s\n", b);
 	//char *c = ft_strjoin(a, b);
 	//char *c = ft_substr(a, 4, 3);
-	//ft_lstnew(a);
-	//char *c = ft_strtrim(a, "a");
+	//elemen = ft_lstnew(a);
+	char *c = ft_strtrim(a, "l ");
 	//char *c = ft_strtrim(b, " ");
-	char **c = ft_split(a, ' ');
+	//char **c = ft_split(a, ' ');
 	//char *c = ft_itoa(0);
-	//printf("%s\n", conten);
+	//printf("%s\n %s\n", (char*)elemen->content);
 	//ft_putnbr_fd(-2147483648, 1);
 	return(0);
 }
