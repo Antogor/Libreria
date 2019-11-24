@@ -5,7 +5,7 @@
 
 int	main()
 {
-	char a[] = " lorem ipsum dolor sit";
+	char a[] = "l orem ipsum dolor sit l";
 	t_list *elemen;
 	int l;
 	int q;
@@ -45,7 +45,7 @@ int	main()
 	//char *c = ft_strtrim(b, " ");
 	//char **c = ft_split(a, ' ');
 	//char *c = ft_itoa(0);
-	//printf("%s\n %s\n", (char*)elemen->content);
+	printf("%s\n", c);
 	//ft_putnbr_fd(-2147483648, 1);
 	return(0);
 }
