@@ -41,11 +41,11 @@ int	main()
 	//char *c = ft_strjoin(a, b);
 	//char *c = ft_substr(a, 4, 3);
 	//elemen = ft_lstnew(a);
-	char *c = ft_strtrim(a, "l ");
+	//char *c = ft_strtrim(a, "l ");
 	//char *c = ft_strtrim(b, " ");
-	//char **c = ft_split(a, ' ');
+	char **c = ft_split(a, ' ');
 	//char *c = ft_itoa(0);
-	printf("%s\n", c);
+	printf("%s\n%s\n%s\n", c[0], c[1], c[2]);
 	//ft_putnbr_fd(-2147483648, 1);
 	return(0);
 }
