@@ -5,7 +5,7 @@
 
 int	main()
 {
-	char a[] = "l hola";
+	char a[] = "  \t \t \n   \n\n\n\t";
 	t_list *elemen;
 	int l = 42;
 	int q;
@@ -41,7 +41,7 @@ int	main()
 	//char *c = ft_strjoin(a, b);
 	//char *c = ft_substr(a, 4, 3);
 	//elemen = ft_lstnew(&l);
-	char *c = ft_strtrim(a, "l ");
+	char *c = ft_strtrim(a, " \n\t");
 	//char *c = ft_strtrim(b, " ");
 	//char **c = ft_split(a, ' ');
 	//char *c = ft_itoa(1072);

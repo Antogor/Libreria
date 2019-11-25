@@ -6,62 +6,62 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 12:38:38 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/25 10:49:04 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/25 19:43:07 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	cstart(char const *s1, char const *set)
+size_t    cstart(char const *s1, char const *set)
 {
-	size_t	count_s;
-	size_t	len;
-	size_t	q;
-	int		l;
-	int		x;
+	size_t    count_s;
+	int       q;
+	int       l;
 
 	count_s = 0;
-	len = ft_strlen(set);
 	q = 0;
-	x = 0;
-	while (q < len)
+	while (*s1)
 	{
 		l = 0;
 		while (set[l] != '\0')
 		{
-			if (s1[x++] == set[l])
+			if (set[l] == *s1)
+			{
 				count_s++;
-			else
-				l++;
+				break;
+			}
+			l++;
 		}
-		q++;
+		if (!set[l])
+			return (count_s);
+		s1++;
 	}
 	return (count_s);
 }
 
-size_t	cend(char const *s1, char const *set)
+size_t    cend(char const *s1, char const *set)
 {
-	size_t	count_e;
-	size_t	len;
-	size_t	len2;
-	size_t	q;
-	int		l;
+	size_t    count_e;
+	size_t    len;
+	int        l;
 
 	count_e = 0;
 	len = ft_strlen(s1) - 1;
-	len2 = ft_strlen(set);
-	q = 0;
-	while (q < len2)
+	while (s1[len])
 	{
 		l = 0;
-		while (set[l])
+		while (set[l] != '\0')
 		{
-			if (s1[len--] == set[l])
+			if (set[l] == s1[len])
+			{
 				count_e++;
-			else
-				l++;
+				break;
+			}
+			l++;
 		}
-		q++;
+		if (!set[l])
+			return (count_e);
+		len--;
 	}
 	return (count_e);
 }
@@ -74,6 +74,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		l;
 	size_t	len;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	start = cstart(s1, set);
 	end = cend(s1, set);
 	len = ft_strlen(s1);
