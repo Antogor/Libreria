@@ -5,9 +5,9 @@
 
 int	main()
 {
-	char a[] = "l orem ipsum dolor sit l";
+	char a[] = "hola";
 	t_list *elemen;
-	int l;
+	int l = 42;
 	int q;
 	//char b[] = "lorem \n ipsum \t dolor \n sit \t amet";
 	//int *x;
@@ -40,12 +40,13 @@ int	main()
 	//printf("%s\n", b);
 	//char *c = ft_strjoin(a, b);
 	//char *c = ft_substr(a, 4, 3);
-	//elemen = ft_lstnew(a);
+	elemen = ft_lstnew(&l);
 	//char *c = ft_strtrim(a, "l ");
 	//char *c = ft_strtrim(b, " ");
-	char **c = ft_split(a, ' ');
-	//char *c = ft_itoa(0);
-	printf("%s\n%s\n%s\n", c[0], c[1], c[2]);
+	//char **c = ft_split(a, ' ');
+	//char *c = ft_itoa(1072);
+	//printf("%s\n", c);
+	printf("%d\n", (int)elemen->content);
 	//ft_putnbr_fd(-2147483648, 1);
 	return(0);
 }

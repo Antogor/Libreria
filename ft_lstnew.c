@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 12:37:18 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/23 13:51:07 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/25 12:24:21 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ t_list	*ft_lstnew(void const *content)
 		newlist->next = NULL;
 		return (newlist);
 	}
-	newlist->content = malloc(ft_strlen((char*)content));
-	ft_strlcpy(newlist->content, content, ft_strlen((char*)content) + 1);
+	newlist->content = malloc(sizeof(content)
+						* sizeof(newlist->content));
+	newlist->content = ft_strdup(content);
 	newlist->next = NULL;
 	return (newlist);
 }

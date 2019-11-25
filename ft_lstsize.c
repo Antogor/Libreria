@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 11:22:26 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/22 12:43:25 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/25 10:34:08 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ int		ft_lstsize(t_list *lst)
 		count++;
 		lst = lst->next;
 	}
-	return(count);
+	return (count);
 }
