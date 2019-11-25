@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 16:54:52 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/25 13:07:06 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/25 15:10:47 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	while (aux)
 	{
 		tmp = aux;
-		ft_lstdelone(aux, del);
+		del(aux->content);
+		free(aux);
 		aux = tmp->next;
 	}
 	*lst = NULL;
