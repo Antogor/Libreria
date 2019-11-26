@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 12:37:18 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/25 12:24:21 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/26 17:02:55 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstnew(void const *content)
 
 	newlist = (t_list*)malloc(sizeof(t_list));
 	if (newlist == NULL)
-		return (newlist);
+		return (NULL);
 	if (content == NULL)
 	{
 		newlist->content = NULL;

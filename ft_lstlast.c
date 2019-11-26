@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 12:44:43 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/22 12:48:53 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/26 16:51:51 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	while (lst)
 	{
-		lst = lst->next;
 		if (lst->next == NULL)
 			return (lst);
+		lst = lst->next;
 	}
 	return (NULL);
 }

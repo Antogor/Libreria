@@ -6,35 +6,32 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:12:14 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/26 13:55:49 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/26 16:41:01 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_fil(char const *s, char c)
+int			ft_count_fil(char const *s, char c)
 {
-	size_t	count;
-	int		l;
+	int count;
 
 	count = 0;
-	l = 0;
-	while (s[l] == c)
-		l++;
-	if (s[l] != c)
-		count = 1;
-	while (s[l])
+	while (*s)
 	{
-		if (s[l] != c && s[l + 1] == c)
+		while (*s == c)
+			s++;
+		if (*s != '\0')
 			count++;
-		l++;
+		while (*s != c && *s)
+			s++;
 	}
 	return (count);
 }
 
 static int	ft_count_colum(char const *s, char c)
 {
-	size_t count;
+	int	count;
 	int l;
 
 	l = 0;
@@ -47,19 +44,11 @@ static int	ft_count_colum(char const *s, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_cpbi(char **new, char const *s, char c, int fil)
 {
-	char	**new;
-	size_t	fil;
-	size_t l;
+	int l;
 	int q;
 
-	if (*s == 0 || c == 0)
-		return (NULL);
-	fil = ft_count_fil(s, c);
-	new = (char**)malloc(fil * sizeof(char*));
-	if (new == NULL)
-		return (NULL);
 	l = 0;
 	q = 0;
 	while (l < fil)
@@ -71,5 +60,22 @@ char	**ft_split(char const *s, char c)
 			q++;
 		l++;
 	}
+	new[l] = NULL;
+	return (new);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**new;
+	int 	fil;
+
+	if (!s || !c)
+		return (NULL);
+	fil = ft_count_fil(s, c);
+	new = (char**)malloc((fil + 1) * sizeof(char*));
+	if (new == NULL)
+		return (NULL);
+	new[fil] = NULL;
+	new = ft_cpbi(new, s, c, fil);
 	return (new);
 }

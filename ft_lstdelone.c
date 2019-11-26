@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 16:26:27 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/22 16:53:00 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/26 16:46:17 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 void	ft_lstdelone(t_list *list, void (*del)(void*))
 {
-	del(list);
-	free(list->content);
-	list->next = NULL;
+	if (list)
+	{
+		del(list->content);
+		free(list);
+		list = NULL;
+	}
 }
