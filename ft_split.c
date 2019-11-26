@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:12:14 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/25 10:37:48 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/26 13:55:49 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,67 +14,62 @@
 
 size_t	ft_count_fil(char const *s, char c)
 {
-	int	count;
+	size_t	count;
+	int		l;
 
 	count = 0;
-	while (*s)
+	l = 0;
+	while (s[l] == c)
+		l++;
+	if (s[l] != c)
+		count = 1;
+	while (s[l])
 	{
-		if (*s == c)
+		if (s[l] != c && s[l + 1] == c)
 			count++;
-		s++;
+		l++;
 	}
 	return (count);
 }
 
-char	**ft_bidimension(size_t fil, size_t colum)
+static int	ft_count_colum(char const *s, char c)
 {
-	size_t	l;
-	char	**new;
+	size_t count;
+	int l;
 
-	new = (char**)malloc(fil * sizeof(char*));
 	l = 0;
-	while (l < fil)
+	count = 0;
+	while (s[l] && s[l] != c)
 	{
-		new[l] = (char*)malloc(sizeof(char) * colum);
+		count++;
 		l++;
 	}
-	return (new);
-}
-
-void	ft_cpybi(char **new, char const *s, char c)
-{
-	int	l;
-	int	q;
-
-	l = 0;
-	q = 0;
-	while (*s)
-	{
-		if (*s != c)
-			new[l][q++] = *s++;
-		else
-		{
-			new[l][q] = '\0';
-			l++;
-			s++;
-			q = 0;
-		}
-	}
+	return (count);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**new;
 	size_t	fil;
-	size_t	colum;
+	size_t l;
+	int q;
 
 	if (*s == 0 || c == 0)
 		return (NULL);
 	fil = ft_count_fil(s, c);
-	colum = ft_strlen(s);
-	new = ft_bidimension(fil, colum);
+	new = (char**)malloc(fil * sizeof(char*));
 	if (new == NULL)
 		return (NULL);
-	ft_cpybi(new, s, c);
+	l = 0;
+	q = 0;
+	while (l < fil)
+	{
+		while (s[q] && s[q] == c)
+			q++;
+		new[l] = ft_substr(s, q, ft_count_colum(s + q, c));
+		while (s[q] && s[q] != c)
+			q++;
+		l++;
+	}
 	return (new);
 }

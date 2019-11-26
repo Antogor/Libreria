@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 12:38:38 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/25 19:43:07 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/26 10:23:49 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 size_t    cstart(char const *s1, char const *set)
 {
 	size_t    count_s;
-	int       q;
 	int       l;
 
 	count_s = 0;
-	q = 0;
 	while (*s1)
 	{
 		l = 0;
