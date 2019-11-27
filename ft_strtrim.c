@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 12:38:38 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/27 13:03:58 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/27 16:20:42 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	len = ft_strlen(s1);
 	l = 0;
 	if (start == len)
-		return (new = "");
+		return (new = ft_strdup(""));
 	if (!(new = (char*)malloc(sizeof(char) * (len - (start + end)) + 1)))
 		return (NULL);
 	while (start < len - end)
