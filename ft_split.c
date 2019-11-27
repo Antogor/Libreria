@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:12:14 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/26 16:41:01 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/27 10:49:47 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static int	ft_count_colum(char const *s, char c)
 	return (count);
 }
 
-char	**ft_cpbi(char **new, char const *s, char c, int fil)
+char		**ft_cpbi(char **new, char const *s, char c, int fil)
 {
 	int l;
 	int q;
@@ -64,10 +64,10 @@ char	**ft_cpbi(char **new, char const *s, char c, int fil)
 	return (new);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**new;
-	int 	fil;
+	int		fil;
 
 	if (!s || !c)
 		return (NULL);

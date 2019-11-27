@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:14:08 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/20 11:48:55 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/27 11:41:03 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (new == 0)
 		return (NULL);
 	l = 0;
-	while (s[l])
+	while (s[l] != '\0')
 	{
 		new[l] = f(l, s[l]);
 		l++;

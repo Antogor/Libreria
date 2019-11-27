@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/22 16:54:52 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/26 16:47:37 by agarzon-         ###   ########.fr       */
+/*   Created: 2019/11/22 17:32:42 by agarzon-          #+#    #+#             */
+/*   Updated: 2019/11/27 11:05:17 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*))
 {
+	t_list *new;
 	t_list *aux;
-	t_list *tmp;
 
-	aux = *lst;
-	while (aux)
+	if (!lst)
+		return (NULL);
+	aux = ft_lstnew(f(lst->content));
+	new = aux;
+	while (lst->next)
 	{
-		tmp = aux;
-		del(aux->content);
+		lst = lst->next;
+		if (!(aux->next = ft_lstnew(f(lst->content))))
+		{
+			del(aux->next);
+			free(aux->next);
+			return (NULL);
+		}
 		aux = aux->next;
-		free(tmp);
-		//aux = tmp->next;
 	}
-	*lst = NULL;
+	return (new);
 }

@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 11:12:52 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/14 18:49:29 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/27 11:44:09 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	q = (const char*)src;
 	if (l == NULL && q == NULL)
 		return (0);
-	while (n--)
+	while (n > 0)
 	{
 		*(l++) = *(q++);
+		n--;
 	}
 	return (dst);
 }

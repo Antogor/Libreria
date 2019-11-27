@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/22 17:32:42 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/26 17:01:11 by agarzon-         ###   ########.fr       */
+/*   Created: 2019/11/21 12:37:18 by agarzon-          #+#    #+#             */
+/*   Updated: 2019/11/27 11:34:55 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*))
+t_list	*ft_lstnew(void const *content)
 {
-	t_list *new;
-	t_list *aux;
+	t_list *newlist;
 
-	if (!lst)
+	newlist = (t_list*)malloc(sizeof(t_list));
+	if (newlist == NULL)
 		return (NULL);
-	aux = ft_lstnew(f(lst->content));
-	new = aux;
-	while (lst)
+	if (content == NULL)
 	{
-		lst = lst->next;
-		if (!(aux->next = ft_lstnew(f(lst->content))))
-		{
-			del(aux->next);
-			free(aux->next);
-			return (NULL);
-		}
-		aux = aux->next;
+		newlist->content = NULL;
+		newlist->next = NULL;
+		return (newlist);
 	}
-	/*		new->next = lst->next;
-		else
-			new->next = NULL;
-		del(lst->content);
-		free(lst);
-	}*/
-	return (new);
+	newlist->content = (void*)malloc(sizeof(content)
+						* sizeof(newlist->content));
+	newlist->content = ft_strdup(content);
+	newlist->next = NULL;
+	return (newlist);
 }
