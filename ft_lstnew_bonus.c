@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 12:37:18 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/27 11:34:55 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/28 11:01:24 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_list	*ft_lstnew(void const *content)
 	}
 	newlist->content = (void*)malloc(sizeof(content)
 						* sizeof(newlist->content));
-	newlist->content = ft_strdup(content);
+	newlist->content = (void*)content;
 	newlist->next = NULL;
 	return (newlist);
 }
