@@ -41,10 +41,10 @@ int	main()
 	//char *c = ft_strjoin(a, b);
 	//char *c = ft_substr(a, 4, 3);
 	//elemen = ft_lstnew(&l);
-	char *c = ft_strtrim(a, " ");
+	//char *c = ft_strtrim(a, " ");
 	//char *c = ft_strtrim(b, " ");
 	//char **c = ft_split(a, ' ');
-	//char *c = ft_itoa(1072);
+	char *c = ft_itoa(-2147483649);
 	printf("%s\n", c);
 	//printf("%d\n", (int)elemen->content);
 	//ft_putnbr_fd(-2147483648, 1);

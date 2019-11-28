@@ -6,13 +6,13 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 12:37:18 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/28 11:01:24 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/28 14:56:24 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list *newlist;
 
@@ -27,7 +27,7 @@ t_list	*ft_lstnew(void const *content)
 	}
 	newlist->content = (void*)malloc(sizeof(content)
 						* sizeof(newlist->content));
-	newlist->content = (void*)content;
+	newlist->content = content;
 	newlist->next = NULL;
 	return (newlist);
 }
