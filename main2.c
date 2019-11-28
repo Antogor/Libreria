@@ -5,10 +5,10 @@
 
 int	main()
 {
-	char a[] = "        ";
-	t_list *elemen;
-	int l = 42;
-	int q;
+	//char a[] = "        ";
+	//t_list *elemen;
+	//int l = 42;
+	//int q;
 	//char b[] = "lorem \n ipsum \t dolor \n sit \t amet";
 	//int *x;
 	//printf("%s \n", ft_memset(a, 66, 1));
@@ -45,7 +45,9 @@ int	main()
 	//char *c = ft_strtrim(b, " ");
 	//char **c = ft_split(a, ' ');
 	char *c = ft_itoa(-2147483649);
+	//char *d = itoa(2147483648);
 	printf("%s\n", c);
+	//printf("%s\n", d);
 	//printf("%d\n", (int)elemen->content);
 	//ft_putnbr_fd(-2147483648, 1);
 	return(0);
