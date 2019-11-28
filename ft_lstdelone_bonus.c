@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 16:26:27 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/26 16:46:17 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/28 14:30:05 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *list, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (list)
+	if (lst)
 	{
-		del(list->content);
-		free(list);
-		list = NULL;
+		del(lst->content);
+		free(lst);
+		lst = NULL;
 	}
 }
