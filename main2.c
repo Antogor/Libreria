@@ -5,7 +5,7 @@
 
 int	main()
 {
-	//char a[] = "        ";
+	char a[] = "zzzzzz";
 	//t_list *elemen;
 	//int l = 42;
 	//int q;
@@ -43,10 +43,10 @@ int	main()
 	//elemen = ft_lstnew(&l);
 	//char *c = ft_strtrim(a, " ");
 	//char *c = ft_strtrim(b, " ");
-	//char **c = ft_split(a, ' ');
-	char *c = ft_itoa(-2147483649);
+	char **c = ft_split(a, '\0');
+	//char *c = ft_itoa(-2147483649);
 	//char *d = itoa(2147483648);
-	printf("%s\n", c);
+	printf("%s\n", c[0]);
 	//printf("%s\n", d);
 	//printf("%d\n", (int)elemen->content);
 	//ft_putnbr_fd(-2147483648, 1);
