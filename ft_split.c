@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:12:14 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/27 10:49:47 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/11/29 10:31:47 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ int			ft_count_fil(char const *s, char c)
 	int count;
 
 	count = 0;
-	while (*s)
+	while (*s != '\0')
 	{
 		while (*s == c)
 			s++;
 		if (*s != '\0')
 			count++;
-		while (*s != c && *s)
+		while (*s != c && *s != '\0')
 			s++;
 	}
 	return (count);
@@ -36,7 +36,7 @@ static int	ft_count_colum(char const *s, char c)
 
 	l = 0;
 	count = 0;
-	while (s[l] && s[l] != c)
+	while (s[l] != '\0' && s[l] != c)
 	{
 		count++;
 		l++;
@@ -53,10 +53,10 @@ char		**ft_cpbi(char **new, char const *s, char c, int fil)
 	q = 0;
 	while (l < fil)
 	{
-		while (s[q] && s[q] == c)
+		while (s[q] != '\0' && s[q] == c)
 			q++;
 		new[l] = ft_substr(s, q, ft_count_colum(s + q, c));
-		while (s[q] && s[q] != c)
+		while (s[q] != '\0' && s[q] != c)
 			q++;
 		l++;
 	}
@@ -75,7 +75,6 @@ char		**ft_split(char const *s, char c)
 	new = (char**)malloc((fil + 1) * sizeof(char*));
 	if (new == NULL)
 		return (NULL);
-	new[fil] = NULL;
 	new = ft_cpbi(new, s, c, fil);
 	return (new);
 }
