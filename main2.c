@@ -46,7 +46,7 @@ int	main()
 	char **c = ft_split(a, '\0');
 	//char *c = ft_itoa(-2147483649);
 	//char *d = itoa(2147483648);
-	printf("%s\n", c[0]);
+	printf("%s\n", c[1]);
 	//printf("%s\n", d);
 	//printf("%d\n", (int)elemen->content);
 	//ft_putnbr_fd(-2147483648, 1);
