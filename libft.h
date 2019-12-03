@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 12:34:13 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/12/02 11:20:58 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/12/03 17:07:35 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char				*ft_strnstr(const char *haystack, const char *needle,
 int					ft_atoi(const char *nptr); //transforma una cadena de numeros en un entero real
 void				*ft_calloc(size_t count, size_t size); //reserva memoria del tamaño mandado y lo llena de nulos
 char				*ft_strdup(const char *s1); //reserva memoria del mismo tamaño de la cadena mandada y la duplica en una cadena nueva
-char				*ft_substr(char const *s, unsigned int start, size_t len); //reserva memoria para crear una nueva cadena nueva que guarde tantos caracterese como se le indiquen de la posicion mandada de la cadena indicada
+char				*ft_substr(char const *s, unsigned int start, size_t len); //reserva memoria para crear una nueva cadena que guarde tantos caracterese como se le indiquen de la posicion mandada de la cadena indicada
 char				*ft_strjoin(char const *s1, char const *s2); //reserva memoria para crear una nueva cadena que contenga las dos cadenas mandadas concatenadas
 char				*ft_strtrim(char const *s1, char const *set); //reserva memoria para crear una nueva cadena que guarde la cadena mandada sin el delimitador indicado al principio y final de la cadena original
 char				**ft_split(char const *s, char c); //reserva memoria para crear una cadena bidimensional. El caracter mandado es el que indicará donde cortar cada fila
