@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 17:12:48 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/11/25 10:31:25 by agarzon-         ###   ########.fr       */
+/*   Updated: 2019/12/18 12:23:14 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,8 @@ char	*ft_itoa(int n)
 	char	*new;
 	int		l;
 
-	if (n < -2147483648)
-		return (NULL);
+/*	if (n < -2147483648)
+		return (NULL);*/
 	l = ft_count_nb(n);
 	new = (char*)malloc(sizeof(char) * l + 1);
 	if (new == 0)
