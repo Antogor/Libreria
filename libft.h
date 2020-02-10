@@ -6,7 +6,7 @@
 /*   By: agarzon- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 12:34:13 by agarzon-          #+#    #+#             */
-/*   Updated: 2019/12/03 17:07:35 by agarzon-         ###   ########.fr       */
+/*   Updated: 2020/02/10 12:05:59 by agarzon-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ char				*ft_strtrim(char const *s1, char const *set); //reserva memoria para cre
 char				**ft_split(char const *s, char c); //reserva memoria para crear una cadena bidimensional. El caracter mandado es el que indicará donde cortar cada fila
 char				*ft_itoa(int n); //reserva memoria para crear una nueva cadena que contenga en formato caracter el numero entero mandado
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char)); //reserva memoria para crear una nueva cadena que contanga una copia de la cadena mandada con las modificaciones de la funcion indicada
+int					**ft_bi_array(int **array, int nrows, int ncolumns); //creacion a traves de malloc de cadenas de ints bidimensionales
+int					**ft_fill_bi_array(int **array, int rows, int columns, int filled); //rellena arrays bidimensionales
 //------------------------------------------------------------------------------
 
 //Impresion en file descriptor --------------------------------
